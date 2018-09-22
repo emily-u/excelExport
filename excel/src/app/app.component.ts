@@ -8,6 +8,7 @@ import { MainService } from './main.service';
 })
 export class AppComponent {
   title = 'app';
+  
   data: any = [{
     "id": 1,
     "first_name": "Jeanette",
@@ -56,6 +57,7 @@ export class AppComponent {
   constructor(private mainService: MainService) { }
 
   exportAsXLSX(): void {
+    console.log(1)
     this.mainService.exportAsExcelFile(this.data, 'sample');
   }
 }
